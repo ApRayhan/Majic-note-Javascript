@@ -21,7 +21,8 @@ addNoteBtn.addEventListener('click', function(e){
   }
   noteObject.push(newNote);
   localStorage.setItem('notes', JSON.stringify(noteObject));
-  noteTxt.value = '';
+  noteTxt = '';
+  noteTitle = '';
   getNotes();
 })
 
@@ -55,6 +56,8 @@ function getNotes(){
   let allNotes = document.getElementById('notes');
   if (notes.length != 0){
     allNotes.innerHTML = html;
+  } else {
+
   }
 }
 
